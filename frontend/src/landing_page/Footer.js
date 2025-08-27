@@ -5,55 +5,55 @@ function Footer() {
     <footer style={{ backgroundColor: "rgb(250, 250, 250)" }}>
       <div className="container border-top mt-5">
         <div className="row mt-5">
-          <div className="col">
+          <div className="col mt-3 text-muted">
             <img src="media/images/logo.svg" style={{ width: "50%" }} />
-            <p>
+            <p className="my-3 mb-0">
               &copy; 2010 - 2024, Not Zerodha Broking Ltd. All rights reserved.
             </p>
           </div>
           <div className="col">
             <p>Company</p>
-            <a href="">About</a>
+            <a href="" className="link-secondary text-decoration-none">About</a>
             <br />
-            <a href="">Products</a>
+            <a href="" className="link-secondary text-decoration-none">Products</a>
             <br />
-            <a href="">Pricing</a>
+            <a href="" className="link-secondary text-decoration-none">Pricing</a>
             <br />
-            <a href="">Referral programme</a>
+            <a href="" className="link-secondary text-decoration-none">Referral programme</a>
             <br />
-            <a href="">Careers</a>
+            <a href="" className="link-secondary text-decoration-none">Careers</a>
             <br />
-            <a href="">Zerodha.tech</a>
+            <a href="" className="link-secondary text-decoration-none">Zerodha.tech</a>
             <br />
-            <a href="">Press & media</a>
+            <a href="" className="link-secondary text-decoration-none">Press & media</a>
             <br />
-            <a href="">Zerodha cares (CSR)</a>
+            <a href="" className="link-secondary text-decoration-none">Zerodha cares (CSR)</a>
             <br />
           </div>
           <div className="col">
             <p>Support</p>
-            <a href="">Contact</a>
+            <a href="" className="link-secondary text-decoration-none">Contact</a>
             <br />
-            <a href="">Support portal</a>
+            <a href="" className="link-secondary text-decoration-none">Support portal</a>
             <br />
-            <a href="">Z-Connect blog</a>
+            <a href="" className="link-secondary text-decoration-none">Z-Connect blog</a>
             <br />
-            <a href="">List of charges</a>
+            <a href="" className="link-secondary text-decoration-none">List of charges</a>
             <br />
-            <a href="">Downloads & resources</a>
+            <a href="" className="link-secondary text-decoration-none">Downloads & resources</a>
             <br />
           </div>
           <div className="col">
             <p>Account</p>
-            <a href="">Open an account</a>
+            <a href="" className="link-secondary text-decoration-none">Open an account</a>
             <br />
-            <a href="">Fund transfer</a>
+            <a href="" className="link-secondary text-decoration-none">Fund transfer</a>
             <br />
-            <a href="">60 day challenge</a>
+            <a href="" className="link-secondary text-decoration-none">60 day challenge</a>
             <br />
           </div>
         </div>
-        <div className="mt-5 text-muted" style={{ fontSize: "14px" }}>
+        <div className="mt-5 text-muted" style={{ fontSize: "12px" }}>
           <p>
             Zerodha Broking Ltd.: Member of NSE​ &​ BSE – SEBI Registration no.:
             INZ000031633 CDSL: Depository services through Zerodha Securities
