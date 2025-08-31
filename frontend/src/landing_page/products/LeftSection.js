@@ -19,16 +19,16 @@ function LeftSection({
           <h1>{productName}</h1>
           <p>{productDesription}</p>
           <div>
-            <a href={tryDemo} style={{ textDecoration: "none" }}>Try Demo</a>
-            <a href={learnMore} style={{ marginLeft: "50px", textDecoration: "none" }}>
+            <a href={tryDemo}>Try Demo</a>
+            <a href={learnMore} style={{ marginLeft: "50px" }}>
               Learn More
             </a>
           </div>
           <div className="mt-3">
-            <a href={googlePlay} style={{ textDecoration: "none" }}>
+            <a href={googlePlay}>
               <img src="media/images/googlePlayBadge.svg" />
             </a>
-            <a href={appStore} style={{ textDecoration: "none" }}>
+            <a href={appStore}>
               <img
                 src="media/images/appstoreBadge.svg"
                 style={{ marginLeft: "50px" }}

@@ -8,13 +8,13 @@ function Navbar() {
       style={{ backgroundColor: "#FFF" }}
     >
       <div class="container p-2">
-        <Link class="navbar-brand" to="/">
+        <a class="navbar-brand" href="/">
           <img
             src="media/images/logo.svg"
             style={{ width: "25%" }}
             alt="Logo"
           />
-        </Link>
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -30,29 +30,29 @@ function Navbar() {
           <form class="d-flex" role="search">
             <ul class="navbar-nav mb-lg-0">
               <li class="nav-item">
-                <Link class="nav-link active" aria-current="page" to="/signup">
+                <a class="nav-link active" aria-current="page" href="#">
                   Signup
-                </Link>
+                </a>
               </li>
               <li class="nav-item">
-                <Link class="nav-link active" to="/about">
+                <a class="nav-link active" href="about">
                   About
-                </Link>
+                </a>
               </li>
               <li class="nav-item">
-                <Link class="nav-link active" to="/product">
+                <a class="nav-link active" href="product">
                   Product
-                </Link>
+                </a>
               </li>
               <li class="nav-item">
-                <Link class="nav-link active" to="/pricing">
+                <a class="nav-link active" href="pricing">
                   Pricing
-                </Link>
+                </a>
               </li>
               <li class="nav-item">
-                <Link class="nav-link active" to="/support">
+                <a class="nav-link active" href="support">
                   Support
-                </Link>
+                </a>
               </li>
             </ul>
           </form>

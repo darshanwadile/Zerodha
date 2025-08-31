@@ -10,7 +10,7 @@ function PricingPage() {
   return (
     <>
       <Hero />
-      <CreateTicket />
+      {/* <CreateTicket /> */}
     </>
   );
 }
