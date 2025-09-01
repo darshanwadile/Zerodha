@@ -37,7 +37,7 @@ const Signup = () => {
       });
       const data = await response.json();
       if (data.success) {
-        alert("Signup successful! Redirecting to dashboard...");
+        alert("Account created successfully! Welcome to your trading platform!");
         // Store user token if provided
         if (data.token) {
           localStorage.setItem('token', data.token);
@@ -47,7 +47,7 @@ const Signup = () => {
           window.location.href = "https://zerodhadashboard-mu.vercel.app";
         }
       } else {
-        alert(data.message || "Signup failed.");
+        alert(data.message || "Registration failed. Please try again.");
       }
     } catch (error) {
       console.error("Error:", error);

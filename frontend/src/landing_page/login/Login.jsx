@@ -26,7 +26,7 @@ const Login = () => {
       });
       const data = await response.json();
       if (data.success) {
-        alert("Login successful! Redirecting to dashboard...");
+        alert("Welcome back! Taking you to your trading dashboard...");
         // Store user token if provided
         if (data.token) {
           localStorage.setItem('token', data.token);
@@ -36,7 +36,7 @@ const Login = () => {
           window.location.href = "https://zerodhadashboard-mu.vercel.app";
         }
       } else {
-        alert(data.message || "Login failed.");
+        alert(data.message || "Invalid credentials. Please try again.");
       }
     } catch (error) {
       console.error("Error:", error);
