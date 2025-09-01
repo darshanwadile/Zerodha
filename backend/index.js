@@ -22,18 +22,40 @@ const authRoute = require("./Routes/AuthRoute");
 const { authenticateUser } = require("./Middlewares/AuthMiddleware");
 
 // Configure CORS to allow credentials from specific origins
-app.use(cors({
-    origin: [
-        'http://localhost:5173', 
-        'http://localhost:5174', 
-        'http://localhost:3000',
-        'https://zerodha-eta-six.vercel.app',
-        'https://zerodhadashboard-mu.vercel.app'
-    ],
+const corsOptions = {
+    origin: function (origin, callback) {
+        const allowedOrigins = [
+            'http://localhost:5173', 
+            'http://localhost:5174', 
+            'http://localhost:3000',
+            'https://zerodha-eta-six.vercel.app',
+            'https://zerodhadashboard-mu.vercel.app'
+        ];
+        
+        // Allow requests with no origin (like mobile apps or curl requests)
+        if (!origin) return callback(null, true);
+        
+        if (allowedOrigins.indexOf(origin) !== -1) {
+            callback(null, true);
+        } else {
+            console.log('CORS blocked origin:', origin);
+            callback(new Error('Not allowed by CORS'));
+        }
+    },
     credentials: true,
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With']
-}));
+    allowedHeaders: ['Content-Type', 'Authorization', 'X-Requested-With'],
+    optionsSuccessStatus: 200 // For legacy browser support
+};
+
+app.use(cors(corsOptions));
+
+// Add logging middleware to debug CORS
+app.use((req, res, next) => {
+    console.log(`${req.method} ${req.path} - Origin: ${req.get('Origin')}`);
+    next();
+});
+
 app.use(bodyParser.json());
 
 app.use(cookieParser());
@@ -72,6 +94,11 @@ mongoose.connection.on('error', (err) => {
 
 mongoose.connection.on('disconnected', () => {
     console.log('⚠️  MongoDB disconnected');
+});
+
+// Test route to verify CORS
+app.get("/test", (req, res) => {
+    res.json({ message: "CORS is working!", origin: req.get('Origin') });
 });
 
 app.use("/", authRoute);
