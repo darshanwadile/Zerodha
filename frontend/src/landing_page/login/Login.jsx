@@ -17,7 +17,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("http://localhost:8080/login", {
+      const response = await fetch("https://your-backend-url.render.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -31,9 +31,9 @@ const Login = () => {
         if (data.token) {
           localStorage.setItem('token', data.token);
           // Also pass token to dashboard via URL parameter
-          window.location.href = `http://localhost:5174?token=${data.token}`;
+          window.location.href = `https://zerodhadashboard-mu.vercel.app?token=${data.token}`;
         } else {
-          window.location.href = "http://localhost:5174";
+          window.location.href = "https://zerodhadashboard-mu.vercel.app";
         }
       } else {
         alert(data.message || "Login failed.");

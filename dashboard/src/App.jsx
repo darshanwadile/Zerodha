@@ -19,7 +19,7 @@ function App() {
     const token = localStorage.getItem('token');
     if (!token) {
       // Redirect to login if no token found
-      window.location.href = "http://localhost:5173/login";
+      window.location.href = "https://zerodha-eta-six.vercel.app/login";
       return;
     }
   }, []);

@@ -19,7 +19,7 @@ export default function Menu() {
         localStorage.removeItem('token');
         document.cookie = 'token=; expires=Thu, 01 Jan 1970 00:00:00 UTC; path=/;';
         // Redirect to frontend landing page
-        window.location.href = "http://localhost:5173";
+        window.location.href = "https://zerodha-eta-six.vercel.app";
     }
 
 

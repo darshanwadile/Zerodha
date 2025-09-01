@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create axios instance with authentication
 const apiClient = axios.create({
-  baseURL: 'http://localhost:8080',
+  baseURL: 'https://your-backend-url.render.com',
   withCredentials: true // This will send cookies including the auth token
 });
 

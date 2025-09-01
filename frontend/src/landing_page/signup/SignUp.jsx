@@ -28,7 +28,7 @@ const Signup = () => {
         createdAt: new Date()
       };
 
-      const response = await fetch("http://localhost:8080/signup", {
+      const response = await fetch("https://your-backend-url.render.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -42,9 +42,9 @@ const Signup = () => {
         if (data.token) {
           localStorage.setItem('token', data.token);
           // Pass token to dashboard via URL parameter
-          window.location.href = `http://localhost:5174?token=${data.token}`;
+          window.location.href = `https://zerodhadashboard-mu.vercel.app?token=${data.token}`;
         } else {
-          window.location.href = "http://localhost:5174";
+          window.location.href = "https://zerodhadashboard-mu.vercel.app";
         }
       } else {
         alert(data.message || "Signup failed.");
