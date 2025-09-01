@@ -17,7 +17,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await fetch("https://zerodha-8069.onrender.com/login", {
+      const response = await fetch("https://zerodha-ybin.onrender.com/login", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

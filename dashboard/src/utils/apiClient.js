@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create axios instance with authentication
 const apiClient = axios.create({
-  baseURL: 'https://zerodha-8069.onrender.com',
+  baseURL: 'https://zerodha-ybin.onrender.com',
   withCredentials: true // This will send cookies including the auth token
 });
 
