@@ -28,7 +28,7 @@ const Signup = () => {
         createdAt: new Date()
       };
 
-      const response = await fetch("https://your-backend-url.render.com/signup", {
+      const response = await fetch("https://zerodha-8069.onrender.com/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
